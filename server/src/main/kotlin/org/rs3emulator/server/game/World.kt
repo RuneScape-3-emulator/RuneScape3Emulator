@@ -18,7 +18,10 @@ class World : Runnable {
             } else {
                 // Sleep the thread if there's time left in this tick
                 try {
-                    Thread.sleep(TICK_LENGTH_MS - deltaTime)
+                    val time = TICK_LENGTH_MS - deltaTime
+                    if (time > 0) {
+                        Thread.sleep(time)
+                    }
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 }
