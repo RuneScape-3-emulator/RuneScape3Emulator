@@ -1,7 +1,28 @@
 package org.rs3emulator.server.game
 
 class World : Runnable {
-    override fun run() {
 
+    val TICK_LENGTH_MS: Long = 600
+
+    override fun run() {
+        var lastTickTime = System.currentTimeMillis()
+
+        // Main server loop
+        while (true) {
+            val currentTime = System.currentTimeMillis()
+            val deltaTime = currentTime - lastTickTime
+            if (deltaTime >= TICK_LENGTH_MS) {
+                // Perform game update
+                // TODO implement game tick
+                lastTickTime = currentTime
+            } else {
+                // Sleep the thread if there's time left in this tick
+                try {
+                    Thread.sleep(TICK_LENGTH_MS - deltaTime)
+                } catch (e: InterruptedException) {
+                    e.printStackTrace()
+                }
+            }
+        }
     }
 }
