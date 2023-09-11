@@ -22,8 +22,8 @@ object Application : KoinComponent {
                 single { World() }
             })
         }
-        executors.submit(Server(43594))
-        executors.submit(get<World>())
+        Server(6969).run()
+        //executors.submit(get<World>())
     }
 
 }
