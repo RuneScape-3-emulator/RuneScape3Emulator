@@ -3,7 +3,7 @@ package org.rs3emulator.server
 import io.netty.bootstrap.ServerBootstrap
 import io.netty.channel.nio.NioEventLoopGroup
 import io.netty.channel.socket.nio.NioServerSocketChannel
-import org.rs3emulator.server.channel.ServerChannelInitializer
+import org.rs3emulator.server.network.channel.ServerChannelInitializer
 
 class Server(val port: Int) : Runnable {
 

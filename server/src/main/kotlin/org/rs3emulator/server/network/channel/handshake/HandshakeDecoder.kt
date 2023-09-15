@@ -1,4 +1,4 @@
-package org.rs3emulator.server.channel.handshake
+package org.rs3emulator.server.network.channel.handshake
 
 import io.netty.buffer.ByteBuf
 import io.netty.channel.ChannelHandlerContext

@@ -1,4 +1,4 @@
-package org.rs3emulator.server.channel
+package org.rs3emulator.server.network.channel
 
 import io.netty.channel.ChannelHandlerContext
 import io.netty.channel.SimpleChannelInboundHandler

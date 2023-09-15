@@ -2,6 +2,8 @@ package org.rs3emulator.server.game
 
 class World : Runnable {
 
+
+
     val TICK_LENGTH_MS: Long = 600
 
     override fun run() {

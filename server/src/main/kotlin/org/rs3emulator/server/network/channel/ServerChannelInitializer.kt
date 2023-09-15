@@ -1,8 +1,8 @@
-package org.rs3emulator.server.channel
+package org.rs3emulator.server.network.channel
 
 import io.netty.channel.ChannelInitializer
 import io.netty.channel.socket.SocketChannel
-import org.rs3emulator.server.channel.handshake.HandshakeDecoder
+import org.rs3emulator.server.network.channel.handshake.HandshakeDecoder
 
 class ServerChannelInitializer : ChannelInitializer<SocketChannel>() {
     override fun initChannel(ch: SocketChannel) {
