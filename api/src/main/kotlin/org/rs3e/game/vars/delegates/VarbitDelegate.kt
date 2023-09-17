@@ -3,7 +3,7 @@ package org.rs3e.game.vars.delegates
 import org.rs3e.game.vars.VarDomain
 import kotlin.reflect.KProperty
 
-class VarbitDelegate<T>(private val id: Int, override val domain: VarDomain<T>) : VarDomainDelegate<T> {
+class VarbitDelegate<T>(private val id: Int, override val domain: VarDomain<T>) : VarDomainDelegate<T, Int> {
     override fun getValue(ref: T, prop: KProperty<*>): Int {
         return domain.varbits[id] ?: 0
     }

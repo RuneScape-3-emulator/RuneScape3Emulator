@@ -16,6 +16,9 @@ class Server(val port: Int) : Runnable {
             .channel(NioServerSocketChannel::class.java)
             .childHandler(ServerChannelInitializer())
         val future = bootstrap.bind(port).sync()
+
+        println("Server Online @ $port")
+
         future.channel().closeFuture().sync()
     }
 }
